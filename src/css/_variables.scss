@@ -1,7 +1,7 @@
 :root {
 
     --font-family-base: 'Montserrat', sans-serif;
-    
+
     --font-family-sans: 'Inter', system-ui, sans-serif;
     --font-family-serif: 'Georgia', serif;
 
@@ -19,4 +19,13 @@
     --color-link: #009FDA;
     --color-link-hover: #0078AA;
     --color-link-visited: #6A5ACD;
+
+   
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-xbold: 800;
+    --font-weight-xxbold: 900;
+
 }

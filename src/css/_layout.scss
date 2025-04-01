@@ -1,16 +1,29 @@
- // Header 
-
- .layout {
-     display: grid;
-     grid-template-columns: repeat(12, 1fr);
-     grid-column-gap: 1fr; // Or use a fixed unit like 1rem if preferred
-     min-height: 100vh;
+.layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1fr; // Or use a fixed unit like 1rem if preferred
+    min-height: 100vh;
     //  background-color: green;
- }
+}
 
- .layout__header {
-     grid-column: 1 / span 9;
+.layout__header {
+    grid-column: 1 / span 8;
     //  background-color: red;
-     padding: 1rem 0 0 0 ;
-     padding-top: 5em;
- }
+    padding: 1rem 0 0 0;
+    padding-top: 5em;
+}
+
+.layout__side {
+    grid-column: 9 / span 4; // Columns 9–12
+    padding-top: 5em;
+    //  background-color: red;
+    padding: 1rem 0 0 0;
+    padding-top: 5em;
+    video {
+        margin: 50px auto 0; // Top margin + horizontal centering   
+        width: 70%;
+        height: auto;
+        display: block;
+        object-fit: cover; // optional, depending on video aspect
+    }
+}
