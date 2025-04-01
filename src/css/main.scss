@@ -18,6 +18,10 @@ a {
     }
 }
 
+main {
+    padding: 0.5rem 3rem; // needs to be abstracted TODO
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -35,7 +39,7 @@ a {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 3rem; // needs to be abstracted.. 
     &__logo {
         flex-shrink: 0;
         align-items: center;

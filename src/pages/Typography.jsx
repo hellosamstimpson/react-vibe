@@ -1,13 +1,14 @@
 import TypographyTest from "../components/TypographyTest"
+import Hero from "../components/Hero"
 
 function Typography() {
+
+    const heros = [{ id: 2, title: "Powering Your Awards, from Entry to Excellence", lead: "Awards Engine is the all-in-one platform designed for awards organisers, streamlining entry collection, judging, and winner announcements-all in one seamless system.", prod: "How does Awards Engine work?" }];
     return (
         <div>
-            <div className="layout">
-                <header className="layout__header">
-                    <h1>Wrestling with projects?</h1>
-                </header>
-            </div>
+            {heros.map((hero) => (
+                <Hero key={hero.id} hero={hero} />
+            ))}
             <main>
                 <TypographyTest />
             </main>
