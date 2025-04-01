@@ -5,7 +5,7 @@ function Typography() {
         <div>
             <div className="layout">
                 <header className="layout__header">
-                    <h1>Website Header</h1>
+                    <h1>Wrestling with projects?</h1>
                 </header>
             </div>
             <main>

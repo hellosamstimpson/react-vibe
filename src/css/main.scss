@@ -6,67 +6,78 @@
 @import 'variables';
 @import 'layout';
 
+a {
+    color: var(--color-link);
+    text-decoration: underline;
+    &:hover {
+        color: var(--color-link-hover);
+    }
+
+    &:visited {
+        color: var(--color-link);
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    backdrop-filter: blur(0.5em);
+    background: rgba(white, 0.9);
+    &--scrolled {
+        box-shadow: 0 0 0 1px rgba(black, 0.1), 0 0 .1em .02em rgba(black, 0.05);
+        transition: box-shadow 0.1s ease;
+    }
+}
 
 .navbar {
     display: flex;
     justify-content: space-between;
-}
-/* NavBar.module.scss */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0.5rem 3rem;
+    &__logo {
+        flex-shrink: 0;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
 
     &__links {
         display: flex;
-        gap: 1rem;
+        list-style: none;
         padding: 0;
         margin: 0;
-        list-style: none;
+        gap: 1rem;
     }
 
-    &__link {
+        &__link {
+            text-decoration: none;
+            &--active {
+                text-decoration: underline;
+             }
+            &:visited {
+                color: black;
+            }
+
+    }
+
+    &__cta a {
+        display: block;
+        background: var(--color-link);
+        color: white;
+        padding: 0.5rem 1rem;
         text-decoration: none;
-        color: #333;
-
-        &--active {
-            font-weight: bold;
-            color: royalblue;
-        }
+        border-radius: 5px;
     }
 }
 
-// Headings
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    line-height: var(--line-height-heading);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-a {
-    color: blue;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-:root {
-    --font-size-heading: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-}
-
-h1 {
-    font-size: var(--font-size-heading);
+// needs to be moved..to its own section "layout"
+.main {
+    padding-top: 5em;
 }

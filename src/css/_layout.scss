@@ -5,11 +5,12 @@
      grid-template-columns: repeat(12, 1fr);
      grid-column-gap: 1fr; // Or use a fixed unit like 1rem if preferred
      min-height: 100vh;
-     background-color: green;
+    //  background-color: green;
  }
 
  .layout__header {
      grid-column: 1 / span 9;
-     background-color: red;
+    //  background-color: red;
      padding: 1rem;
+     padding-top: 5em;
  }
