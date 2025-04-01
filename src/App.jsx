@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Favorites from "./pages/Favorites"
 import Typography from "./pages/Typography"
 import { Routes, Route } from "react-router-dom"
+import ScrollingBanner from "./components/ScrollingBanner"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/typography" element={<Typography />} />
           </Routes>
         </main>
+        <ScrollingBanner />
       </div>
     )
   }
