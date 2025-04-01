@@ -1,9 +1,8 @@
-import './App.css'
 import MovieCard from "./components/MovieCard"
 import NavBar from "./components/NavBar"
-
 import Home from "./pages/Home"
 import Favorites from "./pages/Favorites"
+import Typography from "./pages/Typography"
 import { Routes, Route } from "react-router-dom"
 
 function App() {
@@ -18,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/typography" element={<Typography />} />
           </Routes>
         </main>
       </div>

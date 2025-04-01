@@ -1,0 +1,69 @@
+@import 'modern-normalize/modern-normalize.css';
+
+/* _typography.scss */
+@import 'typography';
+@import 'buttons';
+@import 'variables';
+@import 'layout';
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+/* NavBar.module.scss */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #333;
+
+        &--active {
+            font-weight: bold;
+            color: royalblue;
+        }
+    }
+}
+
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: var(--line-height-heading);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+:root {
+    --font-size-heading: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+}
+
+h1 {
+    font-size: var(--font-size-heading);
+}

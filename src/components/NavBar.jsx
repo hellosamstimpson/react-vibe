@@ -26,10 +26,18 @@ function NavBar(){
                         Favourites
                     </NavLink>
                 </li>
+                <li className="navbar__item">
+                    <NavLink
+                        to="/typography"
+                        className={({ isActive }) =>
+                            isActive ? "navbar__link navbar__link--active" : "navbar__link"
+                        }>
+                        Typography
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     )
 }
-
 
 export default NavBar;
