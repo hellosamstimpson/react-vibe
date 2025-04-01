@@ -1,19 +1,40 @@
 import MovieCard from "../components/MovieCard"
 import Hero from "../components/Hero"
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import { getPopularMovies, searchMovies } from "../../services/api";
+
 
 function Home(){
     const [searchQuery, setSearchQuery] = useState("");
+    const [movies, setMovies] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    const movies = [
-        { id: 1, title: "1", release_date: "2020" },
-        { id: 2, title: "2", release_date: "2021" },
-        { id: 3, title: "3", release_date: "2022" },
-        { id: 4, title: "4", release_date: "2023" },
-        { id: 5, title: "5", release_date: "2024" },
-        { id: 6, title: "6", release_date: "2025" },
-        { id: 7, title: "7", release_date: "2026" },
-    ];
+    useEffect(() => {
+        const loadPopularMovies = async ()  => {
+            try {
+                const popularMovies = await getPopularMovies();
+                setMovies(popularMovies)
+            } catch (err) {
+                console.log(err)
+                setError("Fart!");
+            }
+            finally {
+                setLoading(false)
+            }
+        }
+        loadPopularMovies()
+    }, [])
+
+    // const movies = [
+    //     { id: 1, title: "1", release_date: "2020" },
+    //     { id: 2, title: "2", release_date: "2021" },
+    //     { id: 3, title: "3", release_date: "2022" },
+    //     { id: 4, title: "4", release_date: "2023" },
+    //     { id: 5, title: "5", release_date: "2024" },
+    //     { id: 6, title: "6", release_date: "2025" },
+    //     { id: 7, title: "7", release_date: "2026" },
+    // ];
 
     const handleSearch = (e) => {
         e.preventDefault()
@@ -49,7 +70,6 @@ function Home(){
                     }
                 </div>
             </div>
-            
         </div>
     )
 }

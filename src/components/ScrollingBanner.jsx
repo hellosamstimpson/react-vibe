@@ -42,7 +42,19 @@ function ScrollingBanner() {
                 <span>{message}</span>
                 <span>{message}</span>
                 <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
                 <span>{message}</span> 
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
+                <span>{message}</span>
                 <span>{message}</span>
                 <span>{message}</span>
                 <span>{message}</span>

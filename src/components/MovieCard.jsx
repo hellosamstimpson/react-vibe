@@ -5,7 +5,7 @@ function MovieCard({movie}){
     }
     return <div>
         <div>
-            <img src={movie.url} alt={movie.title} />
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <div>
                 <button onClick={onFavouriteClick}>
                     Button
