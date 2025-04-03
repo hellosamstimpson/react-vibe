@@ -21,6 +21,7 @@ function App() {
             <Route path="/typography" element={<Typography />} />
           </Routes>
         </main>
+
         <ScrollingBanner />
       </div>
     )
